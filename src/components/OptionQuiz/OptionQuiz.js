@@ -1,12 +1,12 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 
-const OptionQuiz = () => {
+const OptionQuiz = ({params}) => {
     const topic = useLoaderData()
-    console.log(topic)
+    console.log(topic);
     return (
         <div>
-            <h2>OptionQuiz Compo</h2>
+            <h2 className='text-center text-4xl'>OptionQuiz Compo</h2>
         </div>
     );
 };

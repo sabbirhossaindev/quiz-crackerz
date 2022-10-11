@@ -9,8 +9,7 @@ const Header = () => {
             <a className="btn btn-ghost normal-case text-xl" href='/'>Brain Test</a>
         </div>
         <div className="link-list">
-            <Link to='/'>Home</Link>
-            <Link to='topics'>Topics</Link>
+            <Link to='/'>Topics</Link>
             <Link to='/statistics'>Statistics</Link>
             <Link to='/blog'>Blog</Link>
         </div>
