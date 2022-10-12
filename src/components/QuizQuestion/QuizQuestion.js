@@ -1,10 +1,10 @@
 import React from 'react';
 
 const QuizQuestion = ({option, handleCorrectAnswer, handleOption}) => {
-    const { correctAnswer, options, id, question } = option;
-    console.log(option);
+    const { correctAnswer, options, question } = option;
     return (
         <section>
+    
             <div className='w-3/4 mx-auto border border-solid m-5 p-4 rounded-lg shadow-xl'>
                 <div className='flex justify-between bg-purple-300 my-4 text-2xl font-semibold p-2 border-0 rounded-lg'>
                     <h1>{question.slice(3,-4)}</h1>
@@ -14,12 +14,12 @@ const QuizQuestion = ({option, handleCorrectAnswer, handleOption}) => {
                     </svg>
                     </button>
                 </div>
-                
+
                 <div className='option text-lg font-medium space-y-4 text-center'>
-                    <div onClick={() => handleOption(option[0], correctAnswer)} className='border-0 bg-red-300 p-3 rounded-lg shadow-xl'>{options[0]}</div>
-                    <div onClick={() => handleOption(option[1], correctAnswer)} className='border-0 bg-red-300 p-3 rounded-lg shadow-xl'>{options[1]}</div>
-                    <div onClick={() => handleOption(option[2], correctAnswer)} className='border-0 bg-red-300 p-3 rounded-lg shadow-xl'>{options[2]}</div>
-                    <div onClick={() => handleOption(option[3], correctAnswer)} className='border-0 bg-red-300 p-3 rounded-lg shadow-xl'>{options[3]}</div>
+                    <div onClick={() => handleOption(options[0], correctAnswer)} className='border-0 bg-red-300 p-3 rounded-lg shadow-xl cursor-pointer'>{options[0]}</div>
+                    <div onClick={() => handleOption(options[2], correctAnswer)} className='border-0 bg-red-300 p-3 rounded-lg shadow-xl cursor-pointer'>{options[2]}</div>
+                    <div onClick={() => handleOption(options[1], correctAnswer)} className='border-0 bg-red-300 p-3 rounded-lg shadow-xl cursor-pointer'>{options[1]}</div>
+                    <div onClick={() => handleOption(options[3], correctAnswer)} className='border-0 bg-red-300 p-3 rounded-lg shadow-xl cursor-pointer'>{options[3]}</div>
                 </div>
             </div>
         </section>

@@ -16,8 +16,9 @@ const OptionQuiz = () => {
     };
 
     const handleOption = (op, correctAnswer) => {
-        op === correctAnswer ? toast('Correct', { position: toast.POSITION.TOP_LEFT, autoClose: 2000 }) : toast('Incorrect', {autoClose:2000})
-    }
+        op === correctAnswer ? toast('Correct', { position: toast.POSITION.TOP_LEFT, autoClose: 2000 }) : toast('Incorrect', { autoClose: 2000 })
+        console.log(op, correctAnswer)
+    };
 
     return (
         <div>
@@ -32,7 +33,6 @@ const OptionQuiz = () => {
                 ></QuizQuestion>)
             }
             <ToastContainer></ToastContainer>
-
         </div>
     );
 };
