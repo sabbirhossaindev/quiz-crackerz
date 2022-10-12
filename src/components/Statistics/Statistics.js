@@ -1,10 +1,19 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import Statistic from '../Statistic/Statistic';
 
 const Statistics = () => {
+    const statistics = useLoaderData();
+    console.log(statistics);
     return (
-        <div>
-            <h2 className='text-3xl text-center'>Statistics compo</h2>
-        </div>
+        <section>
+            {
+                statistics.data.map(statistic => <Statistic
+                    key={statistic.id}
+                    statistic={statistic}
+                ></Statistic>)
+            }
+        </section>
     );
 };
 

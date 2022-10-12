@@ -22,9 +22,12 @@ const OptionQuiz = () => {
     return (
         <div>
             <h3 className='text-center text-3xl text-rose-500'>Quiz of {options.name}</h3>
+            <hr className='mt-3 mr-28 ml-28' />
             {
                 options.questions.map(option => <QuizQuestion
                     key={option.id}
+                    handleCorrectAnswer={handleCorrectAnswer}
+                    handleOption={handleOption}
                     option={option}
                 ></QuizQuestion>)
             }

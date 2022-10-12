@@ -5,7 +5,6 @@ const QuizQuestion = ({option, handleCorrectAnswer, handleOption}) => {
     console.log(option);
     return (
         <section>
-            {/* <h1>Quiz Topic of : {id}</h1> */}
             <div className='w-3/4 mx-auto border border-solid m-5 p-4 rounded-lg shadow-xl'>
                 <div className='flex justify-between bg-purple-300 my-4 text-2xl font-semibold p-2 border-0 rounded-lg'>
                     <h1>{question.slice(3,-4)}</h1>
@@ -15,6 +14,7 @@ const QuizQuestion = ({option, handleCorrectAnswer, handleOption}) => {
                     </svg>
                     </button>
                 </div>
+                
                 <div className='option text-lg font-medium space-y-4 text-center'>
                     <div onClick={() => handleOption(option[0], correctAnswer)} className='border-0 bg-red-300 p-3 rounded-lg shadow-xl'>{options[0]}</div>
                     <div onClick={() => handleOption(option[1], correctAnswer)} className='border-0 bg-red-300 p-3 rounded-lg shadow-xl'>{options[1]}</div>
