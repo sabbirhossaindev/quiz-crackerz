@@ -4,7 +4,6 @@ import Topic from '../Topic/Topic';
 
 const Topics = () => {
     const topics = useLoaderData();
-    console.log(topics.data);
     return (
         <section>
             <div>
@@ -12,7 +11,7 @@ const Topics = () => {
                 <br /> Brain Test Assignment.</h2>
                 <p className='m-5 text-xl text-center'>Brain Test is an addictive free tricky puzzle game with a series of tricky brain teasers. Different riddles testing will challenge your mind. Get ready to take the quiz!</p>
             </div>
-            <div className='w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16'>
+            <div className='w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12'>
             {
                 topics.data.map(topic => <Topic
                     key={topic.id}
